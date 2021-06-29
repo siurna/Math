@@ -1,0 +1,50 @@
+.anime--jump {
+    animation: cart 0.75s linear;
+}
+@keyframes cart {
+    0% {
+    }
+    20% {
+        transform: rotate(15deg);
+    }
+    40% {
+        transform: rotate(-15deg);
+    }
+    60% {
+        transform: rotate(15deg);
+    }
+    80% {
+        transform: rotate(-15deg);
+    }
+    100% {
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .anim__fade-in-up {
+        transform: translateY(4rem);
+        opacity: 0;
+        transition: 0.85s linear;
+        &.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .wc-block-grid__product,
+    .product,
+    .anim__fade-in-up--fast,
+    .wc-block-layout {
+        transform: translateY(4rem);
+        opacity: 0;
+        transition: 0.5s linear;
+        &.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .home .wc-block-grid__product {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

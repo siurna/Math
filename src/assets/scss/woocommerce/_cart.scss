@@ -1,0 +1,148 @@
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+    padding: 0.7rem;
+    width: 200px;
+}
+.cart_totals {
+    > h2 {
+        display: none;
+    }
+}
+#order_review_heading {
+    margin-top: 4rem;
+}
+.page-template-_cart .qty {
+    border: none;
+}
+.single-product .woocommerce-message {
+    top: 145px;
+}
+.woocommerce-message {
+    border-top-color: #dbe8f0;
+}
+.woocommerce table.shop_table {
+    border-radius: 0;
+    border: none;
+}
+
+.woocommerce #respond input#submit.disabled,
+.woocommerce #respond input#submit:disabled,
+.woocommerce #respond input#submit:disabled[disabled],
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled],
+.woocommerce input.button.disabled,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled] {
+    display: none;
+}
+.woocommerce-cart-form {
+    .qty-label {
+        display: none;
+    }
+    .quantity__input__wrapper {
+        margin-left: 0;
+    }
+    tbody {
+        tr {
+            font-family: "Gordita-Light", sans-serif;
+        }
+    }
+}
+#order_review_heading {
+    margin-top: 0;
+}
+.woocommerce-additional-fields {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.woocommerce #payment #place_order,
+.woocommerce-page #payment #place_order {
+    width: 100%;
+    padding: 1.5rem;
+}
+@media all and (max-width: 576px) {
+    .page-template-_cart {
+        .container--sm {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}
+.woocommerce #content table.cart td.actions .coupon,
+.woocommerce table.cart td.actions .coupon,
+.woocommerce-page #content table.cart td.actions .coupon,
+.woocommerce-page table.cart td.actions .coupon {
+    float: right;
+    width: 48%;
+}
+.actions {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    #coupon_code {
+        width: calc(70% - 4px) !important;
+    }
+    button {
+        width: 30% !important;
+    }
+}
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+    padding: 0.775rem;
+}
+.woocommerce-form-coupon-toggle {
+    display: none;
+}
+#add_payment_method .checkout .col-2 .form-row-first,
+.woocommerce-cart .checkout .col-2 .form-row-first,
+.woocommerce-checkout .checkout .col-2 .form-row-first {
+    width: 50%;
+    input {
+        padding: 0.7rem;
+    }
+}
+.woocommerce form .form-row-last,
+.woocommerce-page form .form-row-last {
+    width: 50%;
+
+    button {
+        width: 100%;
+    }
+}
+.shop_table.woocommerce-checkout-review-order-table {
+    tbody {
+        tr {
+            font-family: "Gordita-Light", sans-serif;
+        }
+    }
+}
+.woocommerce-checkout-payment {
+    margin-top: 2rem;
+}
+.shipping-calculator-form {
+    padding: 0 !important;
+}
+button[name="calc_shipping"] {
+    width: 100%;
+}
+.woocommerce-notices-wrapper .woocommerce-message::before {
+    display: none;
+}
+#add_payment_method #payment ul.payment_methods li img,
+.woocommerce-cart #payment ul.payment_methods li img,
+.woocommerce-checkout #payment ul.payment_methods li img {
+    width: auto;
+}
+
+button.email-domain {
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    appearance: none;
+    border-radius: 0;
+    padding: 3px 6px;
+}

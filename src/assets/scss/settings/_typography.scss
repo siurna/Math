@@ -1,0 +1,232 @@
+@font-face {
+	font-family: "Gordita-Light";
+	src: url("../../../fonts/Gordita-Light/3A4BAA_0_0.eot");
+	src: url("../../../fonts/Gordita-Light/3A4BAA_0_0.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../../fonts/Gordita-Light/3A4BAA_0_0.woff2") format("woff2"),
+		url("../../../fonts/Gordita-Light/3A4BAA_0_0.woff") format("woff"),
+		url("../../../fonts/Gordita-Light/3A4BAA_0_0.ttf") format("truetype");
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gordita-Medium";
+	src: url("../../../fonts/Gordita-Medium/3A4BAA_1_0.eot");
+	src: url("../../../fonts/Gordita-Medium/3A4BAA_1_0.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../../fonts/Gordita-Medium/3A4BAA_1_0.woff2") format("woff2"),
+		url("../../../fonts/Gordita-Medium/3A4BAA_1_0.woff") format("woff"),
+		url("../../../fonts/Gordita-Medium/3A4BAA_1_0.ttf") format("truetype");
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gordita-Regular";
+	src: url("../../../fonts/Gordita-Regular/3A4BAA_2_0.eot");
+	src: url("../../../fonts/Gordita-Regular/3A4BAA_2_0.eot?#iefix")
+			format("embedded-opentype"),
+		url("../../../fonts/Gordita-Regular/3A4BAA_2_0.woff2") format("woff2"),
+		url("../../../fonts/Gordita-Regular/3A4BAA_2_0.woff") format("woff"),
+		url("../../../fonts/Gordita-Regular/3A4BAA_2_0.ttf") format("truetype");
+	font-display: swap;
+}
+body {
+	font-family: "Gordita-Medium", sans-serif;
+}
+h1 {
+	font-family: "Gordita-Medium", sans-serif;
+	line-height: 1.25;
+	margin-bottom: 2rem;
+	@include fluid-type(font-size, 576px, 1280px, 29px, 36px);
+	&.product_title {
+		font-family: "Gordita-Medium", sans-serif;
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+		margin-bottom: 1rem;
+	}
+	+ p {
+		margin-top: 1.5rem;
+	}
+}
+.page-heading h1 {
+	margin-bottom: 0;
+}
+.home.page-template-index h2 {
+	font-family: "Gordita-Medium", sans-serif;
+	@include fluid-type(font-size, 576px, 1280px, 36px, 60px);
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+	color: #162317;
+
+	&.woocommerce-loop-product__title {
+		font-family: "Gordita-Medium", sans-serif;
+		font-size: 1.25rem !important;
+		font-weight: 400;
+		line-height: 1.25;
+		margin-bottom: 0.5rem i !important;
+		color: #1f2026;
+	}
+}
+h2 {
+	font-family: "Gordita-Medium", sans-serif;
+	@include fluid-type(font-size, 576px, 1280px, 20px, 48px);
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+	+ p {
+		margin-top: 1rem;
+	}
+}
+h3 {
+	font-family: "Gordita-Medium", sans-serif;
+	@include fluid-type(font-size, 576px, 1280px, 20px, 40px);
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+	+ p {
+		margin-top: 1rem;
+	}
+}
+h4 {
+	font-family: "Gordita-Medium", sans-serif;
+	@include fluid-type(font-size, 576px, 1280px, 18px, 28px);
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+	+ p {
+		margin-top: 1rem;
+	}
+}
+h5 {
+	font-family: "Gordita-Medium", sans-serif;
+	@include fluid-type(font-size, 576px, 1280px, 16px, 20px);
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+	+ p {
+		margin-top: 1rem;
+	}
+}
+h6 {
+	font-family: "Gordita-Medium", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+	+ p {
+		margin-top: 1rem;
+	}
+}
+p {
+	font-family: "Gordita-Regular", sans-serif;
+	font-size: 0.9rem;
+	font-weight: 400;
+	line-height: 1.5rem;
+	margin-bottom: 1rem;
+	color: $theme-neutral;
+	&.ingridient {
+		display: inline;
+	}
+	strong {
+		font-weight: 900;
+	}
+	a {
+		color: #a5a6b8 !important;
+		border-bottom: 1px solid #a5a6b8;
+		word-break: break-word;
+	}
+	+ h1,
+	+ h2,
+	+ h3,
+	+ h4,
+	+ h5,
+	+ h6 {
+		margin-top: 2rem;
+	}
+}
+ul {
+	list-style-type: circle;
+	li {
+		font-family: "Gordita-Regular", sans-serif;
+		font-size: 0.9rem;
+		font-weight: 400;
+		line-height: 1.25;
+		margin-bottom: 1rem;
+		margin-left: 2rem;
+	}
+}
+ol {
+	list-style-type: decimal;
+	margin-left: 16px;
+	li {
+		font-family: "Gordita-Regular", sans-serif;
+		font-size: 0.9rem;
+		font-weight: 400;
+		line-height: 1.25;
+		margin-bottom: 1rem;
+	}
+}
+.text-center {
+	text-align: center;
+}
+.page-template-default {
+	.article__block {
+		article {
+			h3 {
+				margin-bottom: 6rem;
+			}
+		}
+		&__text {
+			padding-top: 8rem;
+		}
+	}
+}
+li.cat-item a {
+	font-family: "Gordita-Regular", sans-serif;
+	font-size: 0.9rem;
+	font-weight: 400;
+	line-height: 1.25;
+}
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: $theme-black;
+}
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+	font-family: "Gordita-Regular", sans-serif;
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: black;
+}
+.woocommerce ul.products li.product .price,
+.wc-block-grid__product .wc-block-grid__product-price {
+	color: #292c35;
+	font-family: "Gordita-Medium", sans-serif;
+	font-size: 1.2rem;
+	line-height: 1.25;
+}
+.wc-block-grid__product .wc-block-grid__product-title,
+.woocommerce-loop-product__title {
+	font-family: "Gordita-Medium", sans-serif;
+	font-size: 1.25rem !important;
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: 0.5rem i !important;
+	color: #1f2026;
+}
+.main-header a,
+.main-navigation__toggler-content {
+	font-family: "Gordita-Regular", sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.25;
+}
+.page {
+	h2 {
+		font-family: "Gordita-Medium", sans-serif;
+		@include fluid-type(font-size, 576px, 1280px, 36px, 48px);
+		font-weight: 400;
+		margin-bottom: 1rem;
+	}
+}

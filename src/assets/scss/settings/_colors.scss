@@ -1,0 +1,22 @@
+// Color Variables
+$theme-white: #fff;
+$theme-light: #f7f4ef;
+$theme-dark: #e9e0d7;
+$theme-blue: #dae7ef;
+$theme-black: #162317;
+$theme-neutral: #1f2021;
+$theme-hover: #a5a6b8;
+
+// Backgrounds
+.bg--white {
+	background-color: $theme-white;
+}
+.bg--light {
+	background-color: $theme-light;
+}
+.bg--dark {
+	background-color: $theme-dark;
+}
+.bg--blue {
+	background-color: $theme-blue;
+}
