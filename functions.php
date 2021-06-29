@@ -132,11 +132,18 @@ function math_custom_languages_list(){
 		echo '</div>';
     }
 }
+
 // Filter works well for changing Woo Select options button names, but problem is that it stops rendering home page
-// add_filter( 'woocommerce_product_add_to_cart_text', function( $text ) {
-// 	global $product;
-// 	if ( $product->is_type( 'variable' ) ) {
-// 	$text = $product->is_purchasable() ? __( 'Daugiau', 'woocommerce' ) : __( 'Read more', 'woocommerce' );
-// 	}
-// 	return $text;
-// }, 10 );
+ add_filter( 'woocommerce_product_add_to_cart_text', function( $text ) {
+ 	global $product;
+
+ 	if (!$product) {
+ 	    return $text;
+    }
+
+ 	if ( $product->is_type( 'variable' ) ) {
+ 	    $text = $product->is_purchasable() ? __( 'Daugiau', 'woocommerce' ) : __( 'Read more', 'woocommerce' );
+ 	}
+
+ 	return $text;
+ }, 10 );
