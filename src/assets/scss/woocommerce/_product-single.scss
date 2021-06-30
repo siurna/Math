@@ -98,6 +98,13 @@ select {
         flex: 1;
     }
 }
+
+
+@media all and (max-width: 768px) {
+    .tabs.wc-tabs {
+        flex-direction: column;
+    }
+}
 @media all and (max-width: 576px) {
     .tabs.wc-tabs li {
         flex: 50%;
@@ -112,6 +119,7 @@ select {
 }
 ul.tabs.wc-tabs li {
     border: 1px solid #ececec;
+    font-family: "Gordita-Medium", sans-serif;
     border-top-left-radius: 1px;
     border-top-right-radius: 1px;
     border-bottom: none;

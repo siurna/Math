@@ -36,7 +36,6 @@ $product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 	<div class="woocommerce-tabs wc-tabs-wrapper">
 		<ul class="tabs wc-tabs" role="tablist">
-
 			<?php if ( ! empty( $product_tabs ) ) : ?>
 
 				<!-- Default Woo Tabs -->
