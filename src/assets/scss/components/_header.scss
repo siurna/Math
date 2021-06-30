@@ -256,7 +256,12 @@ header.main-header {
                 > a {
                     padding: 0 1rem;
                     display: flex;
-                    align-items: center;
+                    align-items: baseline;
+
+                    small {
+                        margin-left: 4px;
+                        font-size: 12px;
+                    }
                 }
                 &:hover {
                     .sub-menu {
@@ -291,11 +296,10 @@ header.main-header {
                     height: 0.8em !important;
                     width: 1.25em !important;
                     border-radius: 3px;
-                    margin: 0 0.07em !important;
                     vertical-align: -0.1em !important;
                     background: none !important;
                     padding: 0 !important;
-                    margin-right: 1rem !important;
+                    margin-right: 8px !important;
                 }
             }
         }
@@ -420,4 +424,8 @@ header.main-header {
             padding: 0.5rem;
         }
     }
+}
+
+.menu-language-switcher-container {
+    display: none;
 }

@@ -127,7 +127,9 @@ function math_custom_languages_list()
                 if ($l['country_flag_url']) {
                     echo '<img src="' . $l['country_flag_url'] . '" alt="' . $l['language_code'] . '" class="lang-icon" />';
                 }
-                echo icl_disp_language($l['native_name']);
+                preg_match('#\((.*?)\)#', $l['native_name'], $lang_extensions);
+                $lang_name = str_replace($lang_extensions[0], '', $l['native_name']);
+                echo $lang_name . '<small>' . $lang_extensions[0] . '</small>';
                 echo '</a>';
                 echo '</li>';
             }
@@ -153,27 +155,28 @@ add_filter('woocommerce_product_add_to_cart_text', function ($text) {
     return $text;
 }, 10);
 
-function wc_varb_price_range( $wcv_price, $product ) {
+function wc_varb_price_range($wcv_price, $product)
+{
 
     $prefix = sprintf('%s: ', __('From', 'wcvp_range'));
 
-    $wcv_reg_min_price = $product->get_variation_regular_price( 'min', true );
-    $wcv_min_sale_price    = $product->get_variation_sale_price( 'min', true );
-    $wcv_max_price = $product->get_variation_price( 'max', true );
+    $wcv_reg_min_price = $product->get_variation_regular_price('min', true);
+    $wcv_min_sale_price = $product->get_variation_sale_price('min', true);
+    $wcv_max_price = $product->get_variation_price('max', true);
     $wcv_min_price = $product->get_variation_price('min', true);
 
     if (!is_product()) {
         return $wcv_price;
     }
 
-    $wcv_price = ( $wcv_min_sale_price == $wcv_reg_min_price ) ?
-        wc_price( $wcv_reg_min_price ) :
-        '<del>' . wc_price( $wcv_reg_min_price ) . '</del>' . '<ins>' . wc_price( $wcv_min_sale_price ) . '</ins>';
+    $wcv_price = ($wcv_min_sale_price == $wcv_reg_min_price) ?
+        wc_price($wcv_reg_min_price) :
+        '<del>' . wc_price($wcv_reg_min_price) . '</del>' . '<ins>' . wc_price($wcv_min_sale_price) . '</ins>';
 
-    return ( $wcv_min_price == $wcv_max_price ) ?
+    return ($wcv_min_price == $wcv_max_price) ?
         $wcv_price :
         '';
 }
 
-add_filter( 'woocommerce_variable_sale_price_html', 'wc_varb_price_range', 10, 2 );
-add_filter( 'woocommerce_variable_price_html', 'wc_varb_price_range', 10, 2 );
+add_filter('woocommerce_variable_sale_price_html', 'wc_varb_price_range', 10, 2);
+add_filter('woocommerce_variable_price_html', 'wc_varb_price_range', 10, 2);
