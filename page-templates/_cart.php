@@ -9,9 +9,7 @@
 
 <div id="content">
     <div class="container--sm">
-
         <?php the_content(); ?>
-
     </div>
 </div>
 <?php get_footer(); ?>

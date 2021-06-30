@@ -156,6 +156,10 @@ add_filter('woocommerce_product_add_to_cart_text', function ($text) {
 add_filter('woocommerce_get_price_html', 'woo_hide_variation_price', 10, 2);
 function woo_hide_variation_price($v_price, $v_product)
 {
+    if(!is_product()) {
+        return $v_price;
+    }
+
     $v_product_types = array('variable');
     if (in_array($v_product->product_type, $v_product_types)) {
         return '';

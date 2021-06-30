@@ -551,3 +551,23 @@ section {
 .wc-block-grid.has-2-columns .wc-block-grid__product:nth-child(2n) {
     padding-left: 0;
 }
+
+.woocommerce-order-received {
+    section {
+        padding: 0 !important;
+    }
+
+    h2 {
+        @include fluid-type(font-size, 576px, 1280px, 29px, 36px);
+    }
+}
+
+.woocommerce-table {
+    td {
+        font-family: "Gordita-Regular", sans-serif;
+    }
+}
+
+.woocommerce-customer-details {
+    line-height: 1.5;
+}
