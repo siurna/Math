@@ -360,6 +360,42 @@ input[type="number"] {
         font-size: 16px;
     }
 }
+
+
+.bundled_product_summary .bundled_product_title a.bundled_product_permalink {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &::before {
+        display: none;
+    }
+}
+
+.bundled_product {
+    .images {
+        overflow: hidden;
+
+        figure {
+            transition: transform 0.25s ease-in-out;
+        }
+    }
+
+    &:hover {
+        .images {
+            figure {
+                transform: scale(1.2);
+            }
+        }
+
+        a {
+            color: #a5a6b8 !important;
+        }
+    }
+}
+
 @media all and (min-width: 768px) and (max-width: 912px) {
     .countdown__wrapper {
         .countdown__text {
