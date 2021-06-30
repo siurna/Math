@@ -153,17 +153,27 @@ add_filter('woocommerce_product_add_to_cart_text', function ($text) {
     return $text;
 }, 10);
 
-add_filter('woocommerce_get_price_html', 'woo_hide_variation_price', 10, 2);
-function woo_hide_variation_price($v_price, $v_product)
-{
-    if(!is_product()) {
-        return $v_price;
+function wc_varb_price_range( $wcv_price, $product ) {
+
+    $prefix = sprintf('%s: ', __('From', 'wcvp_range'));
+
+    $wcv_reg_min_price = $product->get_variation_regular_price( 'min', true );
+    $wcv_min_sale_price    = $product->get_variation_sale_price( 'min', true );
+    $wcv_max_price = $product->get_variation_price( 'max', true );
+    $wcv_min_price = $product->get_variation_price('min', true);
+
+    if (!is_product()) {
+        return $wcv_price;
     }
 
-    $v_product_types = array('variable');
-    if (in_array($v_product->product_type, $v_product_types)) {
-        return '';
-    }
+    $wcv_price = ( $wcv_min_sale_price == $wcv_reg_min_price ) ?
+        wc_price( $wcv_reg_min_price ) :
+        '<del>' . wc_price( $wcv_reg_min_price ) . '</del>' . '<ins>' . wc_price( $wcv_min_sale_price ) . '</ins>';
 
-    return $v_price;
+    return ( $wcv_min_price == $wcv_max_price ) ?
+        $wcv_price :
+        '';
 }
+
+add_filter( 'woocommerce_variable_sale_price_html', 'wc_varb_price_range', 10, 2 );
+add_filter( 'woocommerce_variable_price_html', 'wc_varb_price_range', 10, 2 );
