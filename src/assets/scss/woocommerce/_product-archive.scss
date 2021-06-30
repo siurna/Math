@@ -365,3 +365,49 @@
         margin-top: 150px;
     }
 }
+
+.archive-header {
+    align-items: center;
+
+    .woocommerce-category-title {
+        width: 100%;
+    }
+
+    > div:last-child {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 450px;
+        }
+    }
+
+    > div:first-child {
+        > * {
+            width: 80%;
+        }
+    }
+
+    > * {
+        flex: 1;
+    }
+
+    @media all and (max-width: 992px) {
+        flex-direction: column-reverse;
+
+        > div:first-child {
+            > * {
+                width: 100%;
+            }
+        }
+
+        > div:last-child {
+            margin-bottom: 24px;
+
+            img {
+                width: auto;
+                height: 450px;
+            }
+        }
+    }
+}
