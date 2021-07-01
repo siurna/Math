@@ -9,7 +9,7 @@ function math_add_theme_support() {
     ) );
     add_theme_support( 'woocommerce', array(
         'thumbnail_image_width' => 250,
-        'single_image_width'    => 300,
+        'single_image_width'    => 700,
         'woocommerce_thumbnail' => 500,
         'woocommerce_single'    => 700,        
         'product_grid'          => array(
