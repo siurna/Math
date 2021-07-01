@@ -146,3 +146,15 @@ button.email-domain {
     border-radius: 0;
     padding: 3px 6px;
 }
+
+.woocommerce ul#shipping_method li {
+    display: flex;
+}
+.woocommerce ul#shipping_method li label {
+    width: 100%;
+}
+.woocommerce ul#shipping_method li label > div {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}

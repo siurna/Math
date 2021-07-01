@@ -61,7 +61,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="footer-col--md">
-                    <div class="form-row--lg">
+                    <!-- <div class="form-row--lg">
                         <h5><?php esc_html_e( 'MATH naujienlaiškis', 'math' ); ?></h5>    
                     </div>
                     <form action="">
@@ -86,7 +86,7 @@
                         <div class="form-row">
                             <input type="submit" value="<?php esc_html_e( 'Užsisakyti naujienas', 'math' ); ?>">
                         </div>
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </footer>
