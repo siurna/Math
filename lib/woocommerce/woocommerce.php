@@ -114,8 +114,8 @@ function math_display_product_tags() {
     if ($terms) :
         echo '<div class="product-tags">';
             foreach ( $terms as $term ) : 
-                $show = get_field('show_tag_on_page', $term);
-                if ($show[0] === 'show') : 
+                $dont_show = get_field('dont_show_tag_on_page', $term);
+                if ($dont_show != true) : 
                     echo '<span class="product-tag">' . $term->name . '  </span>';
                 endif;
             endforeach;
