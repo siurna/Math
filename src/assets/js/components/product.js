@@ -5,22 +5,26 @@ let quantityInc = document.querySelectorAll("#qty-inc");
 
 if (quantity != null) {
 	for (let i = 0; i <= quantity.length; i++) {
-		// $(document).on("click", "#qty-dec", function () {
-		quantityDec[i].addEventListener("click", function () {
-			if (quantity[i].value > 1) {
-				quantity[i].stepDown(1);
+		if ( quantityDec[i]) {
+			// $(document).on("click", "#qty-dec", function () {
+			quantityDec[i].addEventListener("click", function () {
+				if (quantity[i].value > 1) {
+					quantity[i].stepDown(1);
+					$("input.qty").trigger("change");
+
+					$("[name='update_cart']").trigger("click");
+				}
+			});
+		}
+		// $(document).on("click", "#qty-inc", function () {
+		if ( quantityInc[i] ) {
+			quantityInc[i].addEventListener("click", function () {
+				quantity[i].stepUp(1);
 				$("input.qty").trigger("change");
 
 				$("[name='update_cart']").trigger("click");
-			}
-		});
-		// $(document).on("click", "#qty-inc", function () {
-		quantityInc[i].addEventListener("click", function () {
-			quantity[i].stepUp(1);
-			$("input.qty").trigger("change");
-
-			$("[name='update_cart']").trigger("click");
-		});
+			});
+		}
 	}
 }
 
