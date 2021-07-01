@@ -67,6 +67,13 @@ mobileNavClose.addEventListener("click", function () {
 let header = document.querySelector(".main-header");
 let headerFill = document.querySelector(".main-header__filling");
 
+window.addEventListener('load', (event) => {
+	if (window.pageYOffset > 20) {
+		header.classList.add("filled");
+		headerFill.classList.add("visible");
+	}
+});
+
 window.onscroll = function () {
 	if (window.pageYOffset > 20) {
 		header.classList.add("filled");
