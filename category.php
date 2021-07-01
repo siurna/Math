@@ -1,6 +1,4 @@
-
 <?php get_header(); ?>
-
 <?php get_template_part( 'template-parts/page-heading' ); ?>
 
 <section id="content">
@@ -15,4 +13,3 @@
 </section>
 
 <?php get_footer(); ?>
-

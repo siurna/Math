@@ -8,7 +8,7 @@
                     global $post;
                     $author_id = $post->post_author; 
                     $author_name = get_the_author_meta( 'display_name', $author_id ); ?>
-                    <h6><?= get_the_date( 'Y-F-d' ); ?></h6>
+                    <h6><?= get_the_date(); ?></h6>
                     <h6><?= _e( 'Autorius: ', 'math' );?><?= $author_name; ?></h6>
                 <?php endif; ?>
 

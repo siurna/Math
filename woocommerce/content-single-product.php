@@ -76,22 +76,22 @@ if ( post_password_required() ) {
 								<div class="countdown__timer">
 									<div class="countdown__timer__item">
 										<div class="countdown__timer__item--num" id="day--global--<?= $i; ?>"></div>
-										<p>DAYS</p>
+										<p><?php esc_html_e( 'DIENOS', 'math' ); ?></p>
 									</div>
 									<div class="countdown__timer__separator">:</div>
 									<div class="countdown__timer__item">
 										<div class="countdown__timer__item--num" id="hour--global--<?= $i; ?>"></div>
-										<p>HOURS</p>
+										<p><?php esc_html_e( 'VALANDOS', 'math' ); ?></p>
 									</div>
 									<div class="countdown__timer__separator">:</div>
 									<div class="countdown__timer__item">
 										<div class="countdown__timer__item--num" id="min--global--<?= $i; ?>"></div>
-										<p>MINUTES</p>
+										<p><?php esc_html_e( 'MINUTĖS', 'math' ); ?></p>
 									</div>
 									<div class="countdown__timer__separator">:</div>
 									<div class="countdown__timer__item">
 										<div class="countdown__timer__item--num" id="sec--global--<?= $i; ?>"></div>
-										<p>SECONDS</p>
+										<p><?php esc_html_e( 'SEKUNDĖS', 'math' ); ?></p>
 									</div>
 								</div>
 								<?php $countdown_end = get_sub_field('countdown_end_date'); ?>
@@ -139,22 +139,22 @@ if ( post_password_required() ) {
 										<div class="countdown__timer">
 											<div class="countdown__timer__item">
 												<div class="countdown__timer__item--num" id="day--local--<?= $i; ?>"></div>
-												<p>DAYS</p>
+												<p><?php esc_html_e( 'DIENOS', 'math' ); ?></p>
 											</div>
 											<div class="countdown__timer__separator">:</div>
 											<div class="countdown__timer__item">
 												<div class="countdown__timer__item--num" id="hour--local--<?= $i; ?>"></div>
-												<p>HOURS</p>
+												<p><?php esc_html_e( 'VALANDOS', 'math' ); ?></p>
 											</div>
 											<div class="countdown__timer__separator">:</div>
 											<div class="countdown__timer__item">
 												<div class="countdown__timer__item--num" id="min--local--<?= $i; ?>"></div>
-												<p>MINUTES</p>
+												<p><?php esc_html_e( 'MINUTĖS', 'math' ); ?></p>
 											</div>
 											<div class="countdown__timer__separator">:</div>
 											<div class="countdown__timer__item">
 												<div class="countdown__timer__item--num" id="sec--local--<?= $i; ?>"></div>
-												<p>SECONDS</p>
+												<p><?php esc_html_e( 'SEKUNDĖS', 'math' ); ?></p>
 											</div>
 										</div>
 										<?php $countdown_end = get_sub_field('countdown_end_date'); ?>
